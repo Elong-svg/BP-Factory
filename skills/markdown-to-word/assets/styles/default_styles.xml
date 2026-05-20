@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+通用文档样式配置
+来源：minimax-docx default_styles.xml
+适用场景：通用文档、备忘录、信函
+-->
+<style_config>
+  <metadata>
+    <name>Default Styles</name>
+    <version>1.0</version>
+    <author>Claw (learned from minimax-docx)</author>
+    <description>通用文档样式系统 - 简洁、现代、百搭</description>
+  </metadata>
+
+  <!-- 颜色系统 -->
+  <colors>
+    <color name="primary" hex="#2F5496" description="深蓝色 - 标题"/>
+    <color name="body" hex="#333333" description="深灰色 - 正文"/>
+    <color name="quote" hex="#404040" description="灰色 - 引用"/>
+  </colors>
+
+  <!-- 字体配置 -->
+  <fonts>
+    <font_family type="title_en">Calibri Light</font_family>
+    <font_family type="body_en">Calibri</font_family>
+    <font_family type="title_cn">黑体</font_family>
+    <font_family type="body_cn">微软雅黑</font_family>
+  </fonts>
+
+  <!-- 字号配置 -->
+  <font_sizes>
+    <size element="h1" points="28"/>
+    <size element="h2" points="24"/>
+    <size element="h3" points="18"/>
+    <size element="h4" points="14"/>
+    <size element="body" points="11"/>
+    <size element="footer" points="9"/>
+  </font_sizes>
+
+  <!-- 间距配置 -->
+  <spacing>
+    <heading_1 before="24" after="12" unit="pt"/>
+    <heading_2 before="18" after="6" unit="pt"/>
+    <heading_3 before="12" after="4" unit="pt"/>
+    <heading_4 before="8" after="4" unit="pt"/>
+    <body after="8" unit="pt"/>
+    <line_spacing multiplier="1.15"/>
+  </spacing>
+
+  <!-- 页面布局 -->
+  <page_layout>
+    <paper_size width="210" height="297" unit="mm" name="A4"/>
+    <margins>
+      <margin position="top" value="2.54" unit="cm"/>
+      <margin position="bottom" value="2.54" unit="cm"/>
+      <margin position="left" value="2.54" unit="cm"/>
+      <margin position="right" value="2.54" unit="cm"/>
+    </margins>
+    <content_coverage target="65" unit="percent"/>
+  </page_layout>
+
+  <!-- 表格样式 -->
+  <table_styles>
+    <style name="simple_table">
+      <header>
+        <background_color>#F0F0F0</background_color>
+        <text_color>#333333</text_color>
+        <font_weight>bold</font_weight>
+        <alignment>left</alignment>
+      </header>
+      <data_rows>
+        <border_width>0.5</border_width>
+        <border_color>#CCCCCC</border_color>
+        <alignment>left</alignment>
+      </data_rows>
+    </style>
+  </table_styles>
+
+  <!-- 列表样式 -->
+  <list_styles>
+    <style name="unordered">
+      <bullet_style>bullet</bullet_style>
+      <indent hanging="0.36" unit="inch"/>
+    </style>
+    <style name="ordered">
+      <number_style>decimal</number_style>
+      <indent hanging="0.36" unit="inch"/>
+    </style>
+  </list_styles>
+
+  <!-- 引用样式 -->
+  <blockquote>
+    <left_indent>0.5</left_indent>
+    <right_indent>0.5</right_indent>
+    <unit>inch</unit>
+    <font_style>italic</font_style>
+    <text_color>#404040</text_color>
+  </blockquote>
+
+  <!-- 超链接样式 -->
+  <hyperlink>
+    <text_color>#0563C1</text_color>
+    <underline>true</underline>
+  </hyperlink>
+</style_config>

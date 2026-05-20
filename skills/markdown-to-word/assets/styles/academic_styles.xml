@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+学术论文样式配置
+来源：minimax-docx academic_styles.xml
+适用场景：学术论文、研究报告、文献综述
+-->
+<style_config>
+  <metadata>
+    <name>Academic Paper Styles</name>
+    <version>1.0</version>
+    <author>Claw (learned from minimax-docx)</author>
+    <description>学术论文样式系统 - 传统、正式、规范</description>
+  </metadata>
+
+  <!-- 颜色系统 -->
+  <colors>
+    <color name="primary" hex="#000000" description="黑色 - 所有文字"/>
+    <color name="body" hex="#000000" description="黑色 - 正文"/>
+  </colors>
+
+  <!-- 字体配置 -->
+  <fonts>
+    <font_family type="title_en">Times New Roman</font_family>
+    <font_family type="body_en">Times New Roman</font_family>
+    <font_family type="title_cn">宋体</font_family>
+    <font_family type="body_cn">宋体</font_family>
+  </fonts>
+
+  <!-- 字号配置 -->
+  <font_sizes>
+    <size element="h1" points="14"/>
+    <size element="h2" points="13"/>
+    <size element="h3" points="12"/>
+    <size element="body" points="12"/>
+    <size element="footer" points="10"/>
+  </font_sizes>
+
+  <!-- 间距配置 -->
+  <spacing>
+    <heading_1 before="24" after="12" unit="pt" alignment="center"/>
+    <heading_2 before="18" after="6" unit="pt"/>
+    <heading_3 before="12" after="4" unit="pt"/>
+    <body after="0" unit="pt"/>
+    <line_spacing multiplier="2.0" description="双倍行距"/>
+    <paragraph_first_line_indent value="0.5" unit="inch"/>
+  </spacing>
+
+  <!-- 页面布局 -->
+  <page_layout>
+    <paper_size width="8.5" height="11" unit="inch" name="Letter"/>
+    <margins>
+      <margin position="top" value="1" unit="inch"/>
+      <margin position="bottom" value="1" unit="inch"/>
+      <margin position="left" value="1" unit="inch"/>
+      <margin position="right" value="1" unit="inch"/>
+    </margins>
+    <content_coverage target="70" unit="percent"/>
+  </page_layout>
+
+  <!-- 表格样式 -->
+  <table_styles>
+    <style name="academic_table">
+      <header>
+        <background_color>transparent</background_color>
+        <text_color>#000000</text_color>
+        <font_weight>bold</font_weight>
+        <alignment>center</alignment>
+      </header>
+      <data_rows>
+        <border_width>0.5</border_width>
+        <border_color>#000000</border_color>
+        <alignment>left</alignment>
+        <no_vertical_borders>true</no_vertical_borders>
+      </data_rows>
+    </style>
+  </table_styles>
+
+  <!-- 列表样式 -->
+  <list_styles>
+    <style name="unordered">
+      <bullet_style>bullet</bullet_style>
+      <indent hanging="0.25" unit="inch"/>
+    </style>
+    <style name="ordered">
+      <number_style>decimal</number_style>
+      <indent hanging="0.25" unit="inch"/>
+    </style>
+  </list_styles>
+
+  <!-- 引用样式 -->
+  <blockquote>
+    <left_indent>1</left_indent>
+    <right_indent>1</right_indent>
+    <unit>inch</unit>
+    <font_style>normal</font_style>
+    <line_spacing multiplier="2.0"/>
+  </blockquote>
+
+  <!-- 特殊要求 -->
+  <special_requirements>
+    <requirement>H1 标题必须居中</requirement>
+    <requirement>正文段落首行缩进 0.5 英寸</requirement>
+    <requirement>双倍行距（2.0 倍）</requirement>
+    <requirement>表格使用三线表格式</requirement>
+  </special_requirements>
+</style_config>

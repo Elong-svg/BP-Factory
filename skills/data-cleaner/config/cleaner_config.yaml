@@ -1,0 +1,29 @@
+# data-cleaner 配置文件
+# 修改此文件以自定义清洗行为
+
+input:
+  raw_data_directory: ./raw_data/
+  output_directory: ./cleaned_data/
+  reports_directory: ./reports/
+company_info:
+  name: "<动态> 公司名称"
+  code: "<动态> 股票代码"
+  industry: "<动态> 所属行业"
+  sub_industry: "<动态> 细分行业"
+data_scope:
+  target_period: "<动态> 目标期间"
+  period_type: annual
+  unit_standard: 亿元
+cleaning:
+  anomaly_detection: true
+  auto_impute: true
+  deduplicate: true
+  generate_report: true
+thresholds:
+  z_score_threshold: 3
+  yoy_surge_threshold: 2.0
+  yoy_drop_threshold: -0.5
+  quality_threshold: 80
+impute:
+  method: linear
+  ask_user: true

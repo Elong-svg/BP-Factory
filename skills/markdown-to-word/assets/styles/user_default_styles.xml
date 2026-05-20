@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+用户默认样式配置 — v2.0 专业版
+创建日期：2026-05-20（从 v1.0 重写）
+适用场景：商业计划书、正式文档、企业报告
+
+改进：
+- v1.0: 全黑标题、黑色表头（fallback bug）、字号层级模糊 → 糊成一坨
+- v2.0: 深蓝标题层次分明、专业三线表、条纹行、正文字体优雅
+-->
+<style_config>
+  <metadata>
+    <name>User Default Styles v2.0</name>
+    <version>2.0</version>
+    <author>Claw</author>
+    <description>专业中文文档默认样式 — 黑体标题 + 微软雅黑/宋体正文</description>
+  </metadata>
+
+  <!-- 颜色系统 -->
+  <colors>
+    <color name="primary" hex="#1A3A6B" description="深蓝色 - H1/H2 标题"/>
+    <color name="secondary" hex="#2B579A" description="蓝色 - H3 标题 / 表头背景"/>
+    <color name="body" hex="#2D2D2D" description="深灰色 - 正文（比纯黑柔和）"/>
+    <color name="table_header" hex="#2B579A" description="蓝色表头背景"/>
+    <color name="table_stripe" hex="#E8EEF4" description="浅蓝灰条纹行"/>
+    <color name="caption" hex="#555555" description="灰色 - 图注表注"/>
+  </colors>
+
+  <!-- 字体配置 -->
+  <fonts>
+    <font_family type="title_en">Calibri Light</font_family>
+    <font_family type="body_en">Calibri</font_family>
+    <font_family type="title_h1">黑体</font_family>
+    <font_family type="title_h2">黑体</font_family>
+    <font_family type="title_h3">黑体</font_family>
+    <font_family type="body">微软雅黑</font_family>
+    <font_family type="caption">微软雅黑</font_family>
+  </fonts>
+
+  <!-- 字号配置 — 层次分明 -->
+  <font_sizes>
+    <size element="h1" points="22"/>
+    <size element="h2" points="16"/>
+    <size element="h3" points="13"/>
+    <size element="h4" points="12"/>
+    <size element="body" points="11"/>
+    <size element="caption" points="9"/>
+  </font_sizes>
+
+  <!-- 间距配置 -->
+  <spacing>
+    <heading_1 before="30" after="14" unit="pt"/>
+    <heading_2 before="22" after="10" unit="pt"/>
+    <heading_3 before="16" after="6" unit="pt"/>
+    <heading_4 before="12" after="4" unit="pt"/>
+    <body after="6" unit="pt"/>
+    <caption after="4" unit="pt"/>
+    <line_spacing multiplier="1.25"/>
+  </spacing>
+
+  <!-- 页面布局 — A4 标准 -->
+  <page_layout>
+    <paper_size width="210" height="297" unit="mm" name="A4"/>
+    <margins>
+      <margin position="top" value="2.54" unit="cm"/>
+      <margin position="bottom" value="2.54" unit="cm"/>
+      <margin position="left" value="3.17" unit="cm"/>
+      <margin position="right" value="2.54" unit="cm"/>
+    </margins>
+  </page_layout>
+
+  <!-- 表格样式 — 专业三线表 -->
+  <table_styles>
+    <style name="three_line_table">
+      <header>
+        <background_color>#2B579A</background_color>
+        <text_color>#FFFFFF</text_color>
+        <font_weight>bold</font_weight>
+        <font_size>10.5</font_size>
+        <alignment>center</alignment>
+      </header>
+      <data_rows>
+        <alternating_stripe>#E8EEF4</alternating_stripe>
+        <border_width>0.5</border_width>
+        <border_color>#B0B0B0</border_color>
+        <font_size>10.5</font_size>
+        <alignment>left</alignment>
+      </data_rows>
+    </style>
+  </table_styles>
+
+  <!-- 列表样式 -->
+  <list_styles>
+    <style name="unordered">
+      <bullet_style>bullet</bullet_style>
+      <indent hanging="0.74" unit="cm"/>
+    </style>
+    <style name="ordered">
+      <number_style>decimal</number_style>
+      <indent hanging="0.74" unit="cm"/>
+    </style>
+  </list_styles>
+
+  <!-- 引用样式 -->
+  <blockquote>
+    <left_indent>1.27</left_indent>
+    <right_indent>1.27</right_indent>
+    <unit>cm</unit>
+    <font_style>italic</font_style>
+    <text_color>#555555</text_color>
+  </blockquote>
+</style_config>

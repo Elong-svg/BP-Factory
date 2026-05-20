@@ -1,0 +1,58 @@
+{
+  "name": "data-cleaner",
+  "version": "1.1.0",
+  "description": "通用数据清洗与集中引擎，将多来源、多格式的杂乱原始数据，清洗为干净、完整、结构化的标准化数据集。适配所有行业和公司。",
+  "triggers": [
+    "数据清洗",
+    "数据去重",
+    "数据标准化",
+    "数据集中",
+    "清洗原始数据",
+    "数据质量检查",
+    "异常值检测",
+    "缺失值处理",
+    "数据结构化",
+    "通用数据清洗",
+    "多源数据合并",
+    "数据可信度评级",
+    "data-cleaner"
+  ],
+  "tags": [
+    "数据处理",
+    "数据清洗",
+    "数据质量",
+    "异常检测",
+    "缺失值处理",
+    "数据标准化",
+    "通用型"
+  ],
+  "related_skills": [
+    "finance-data-retrieval",
+    "data",
+    "finance",
+    "document-integrator",
+    "business-plan-creator"
+  ],
+  "quality_checklist": {
+    "completeness_check": [
+      "关键指标完整率 >= 95%",
+      "必填字段无缺失",
+      "时间序列无中断"
+    ],
+    "accuracy_check": [
+      "异常率 < 5%",
+      "无逻辑错误",
+      "单位换算正确"
+    ],
+    "consistency_check": [
+      "多来源数据一致",
+      "差异率 < 5%",
+      "无数据冲突"
+    ],
+    "reliability_check": [
+      "A+B 级记录占比 >= 90%",
+      "所有记录有来源标注",
+      "可信度评分合理"
+    ]
+  }
+}

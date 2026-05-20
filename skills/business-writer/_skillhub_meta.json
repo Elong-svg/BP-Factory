@@ -1,0 +1,90 @@
+{
+  "name": "business-writer",
+  "version": "1.0.0",
+  "description": "商业写作引擎 - 将原始数据和分析结果转化为专业商业论述的方法论 + 模板 + 示例",
+  "description_zh": "商业写作引擎，提供 AI 写作框架、章节专属指南、语言风格控制和示例库",
+  "description_en": "Business writing engine that transforms raw data into professional business analysis",
+  "author": "Claw",
+  "created_at": "2026-03-31",
+  "updated_at": "2026-03-31",
+  "tags": [
+    "写作",
+    "商业分析",
+    "商业计划书",
+    "财务分析",
+    "行业分析",
+    "投资分析",
+    "竞争分析",
+    "战略分析"
+  ],
+  "triggers": [
+    "商业写作",
+    "撰写商业计划书",
+    "写财务分析",
+    "写行业分析",
+    "写竞争分析",
+    "写战略分析",
+    "写执行摘要",
+    "商业论述",
+    "投资分析写作",
+    "财务分析写作",
+    "消灭 AI 味",
+    "写作框架",
+    "商业文档写作"
+  ],
+  "category": "文档创作",
+  "difficulty": "intermediate",
+  "estimated_time": "30-60 分钟",
+  "prerequisites": [
+    "结构化数据准备",
+    "明确章节类型",
+    "了解基本财务指标"
+  ],
+  "related_skills": [
+    "finance-data-retrieval",
+    "finance",
+    "data",
+    "baidu-search",
+    "humanizer",
+    "Word 文档生成",
+    "PDF 文档生成"
+  ],
+  "files": {
+    "main": "SKILL.md",
+    "readme": "README.md",
+    "references": [
+      "references/writing-standards.md",
+      "references/chapter-guides.md",
+      "references/example-library.md",
+      "references/quick-reference.md"
+    ],
+    "scripts": [
+      "scripts/init_business_writer.py"
+    ]
+  },
+  "quality_checklist": {
+    "paragraph_level": [
+      "三层结构完整",
+      "数据支撑",
+      "来源标注",
+      "对比维度",
+      "独立可读",
+      "无 AI 味",
+      "衔接自然"
+    ],
+    "chapter_level": [
+      "字数达标",
+      "标题主旨化",
+      "图表嵌入",
+      "逻辑完整",
+      "语气一致",
+      "无重复内容"
+    ],
+    "full_document_level": [
+      "数据一致性",
+      "编号连续",
+      "引用对应",
+      "结论一致"
+    ]
+  }
+}
