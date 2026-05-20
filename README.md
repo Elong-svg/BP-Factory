@@ -43,24 +43,27 @@
 
 ## 📦 包含哪些技能？
 
-### 核心技能
+### 核心技能（3 个主引擎）
 
 | 技能 | 版本 | 说明 |
 |------|------|------|
 | **[business-plan-creator](skills/business-plan-creator/SKILL.md)** | v5.0.1 | 🏗️ 主引擎：Harness 约束引擎 + 3 级检查点 + 技能追踪 |
 | **[markdown-to-word](skills/markdown-to-word/SKILL.md)** | v2.0.0 | 📄 Markdown → Word 转换器：4 套设计模板，企业级排版 |
+| **[markdown-processor](skills/markdown-processor/SKILL.md)** | v1.0.0 | 🔧 文档处理引擎：Markdown 合并、标题修复、格式统一 |
 
-### 辅助技能
+### 辅助技能（7 个支撑组件）
 
 | 技能 | 说明 |
 |------|------|
-| **data-cleaner** | 🧹 多源数据清洗与结构化引擎 |
-| **business-writer** | ✍️ 商业写作专家，生成专业商业论述 |
+| **data-cleaner** | 🧹 多源数据清洗与结构化引擎，质量评分 ≥ 80 |
+| **business-writer** | ✍️ 商业写作专家，三层论述结构 + 主旨标题 + 去 AI 味 |
 | **humanizer** | 🎭 去除 AI 味，让内容读起来像人写的 |
 | **assistant** | 🧠 WorkBuddy 核心能力整合：自我提升 + 记忆管理 + 知识图谱 |
 | **self-improving-agent** | 🔄 Agent 自我反思与持续学习框架 |
 | **ontology** | 📚 结构化知识图谱引擎 |
 | **find-skills** | 🔍 技能发现与安装助手 |
+
+> **共 10 个技能**：business-plan-creator 运行时会联动调用 data-visualization（WorkBuddy 内置插件）和 finance-data-retrieval（数据获取），两者均为平台级能力，不包含在本工具集内。
 
 ---
 
@@ -164,6 +167,10 @@ oh-my-bp/
 │   ├── markdown-to-word/           # Markdown 转 Word
 │   │   ├── scripts/markdown_to_word_pro.py
 │   │   └── assets/styles/          # 4 套设计模板
+│   ├── markdown-processor/          # 文档处理引擎
+│   │   └── scripts/
+│   │       ├── merge.py             # 多文件合并
+│   │       └── process.py           # 标题修复 + 格式统一
 │   ├── data-cleaner/               # 数据清洗
 │   ├── business-writer/            # 商业写作
 │   └── ...                         # 其他辅助技能
