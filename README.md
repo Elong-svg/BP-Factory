@@ -1,6 +1,6 @@
-# 🏭 DealForge
+# 🏭 BP-Factory
 
-> **AI-Powered Business Plan Foundry — 为腾讯 WorkBuddy 量身锻造的 13 技能智能编排引擎。**
+> **AI-Powered Business Plan Foundry — 为腾讯 WorkBuddy 量身锻造的智能 BP 流水线。**
 >
 > 从原始数据到投资人-ready 的专业商业计划书，一行命令，全自动流水线。
 
@@ -11,13 +11,13 @@
 
 ---
 
-## 💡 为什么叫 DealForge？
+## 💡 为什么叫 BP-Factory？
 
-**Deal** = 交易、商业计划书、投资标的。**Forge** = 锻造、熔炉、千锤百炼。
+**BP** = Business Plan，商业计划书。**Factory** = 工厂、流水线。
 
-就像铁匠在熔炉中反复锤炼钢铁，DealForge 通过 **6 人专家团队并行协作 + 3 级代码强制检查点 + 13 个技能无缝编排**，将原始数据"锻造"成经得起投资人审视的专业商业计划书。
+就像现代化工厂将原材料加工为成品，BP-Factory 通过 **6 人专家团队并行协作 + 3 级代码强制检查点 + 13 个技能无缝编排**，将原始想法和数据"生产"为经得起投资人审视的专业商业计划书。
 
-不是模板填充，不是 AI 随机输出 —— 是 **流水线级的智能锻造工艺**。
+不是模板填充，不是 AI 随机输出 —— 是 **标准化的智能生产线**。
 
 ---
 
@@ -27,7 +27,7 @@
 
 ```
 ❌ 传统方案：SKILL.md 里写"请确保字数达标" → AI 可能忽略
-✅ DealForge：master_check.py 代码强制校验 → 不达标就拒绝输出
+✅ BP-Factory：master_check.py 代码强制校验 → 不达标就拒绝输出
 ```
 
 **约束流程，不约束内容。** Harness 管"怎么做"的合规性，AI 自主决定"写什么"。
@@ -77,7 +77,7 @@
 
 ### 🚀 第三层：领域整合包（3 个）🆕
 
-| 整合包 | 内容 | 与 DealForge 的关系 |
+| 整合包 | 内容 | 与 BP-Factory 的关系 |
 |--------|------|-------------------|
 | **[scientist](skills/scientist/SKILL.md)** | 7 合 1 科研全流程：头脑风暴→文献→EDA→可视化→论文→PPT→示意图 | 提供 data-visualization（期刊级图表生成）能力 |
 | **[NeoData金融搜索服务](skills/NeoData金融搜索服务/SKILL.md)** | 自然语言金融数据搜索：A股/港股/美股/基金/宏观/外汇 7 大类 | 提供 finance-data-retrieval（实时金融数据获取）能力 |
@@ -90,7 +90,7 @@
 ## 🏗️ 架构：智能锻造流水线
 
 ```
-                        DealForge Pipeline
+                        BP-Factory Pipeline
 ┌─────────────────────────────────────────────────────────────────┐
 │                                                                 │
 │  Raw Data    ┌──────────┐   ┌──────────┐   ┌──────────┐   📄   │
@@ -176,7 +176,7 @@ python scripts/query.py "腾讯最新财报营收"
 ## 📁 项目结构
 
 ```
-DealForge/
+BP-Factory/
 ├── skills/
 │   ├── business-plan-creator/      # 🏗️ 商业计划书主引擎 (v5.0.1)
 │   │   ├── SKILL.md
@@ -253,4 +253,4 @@ DealForge/
 
 > *"约束写在纸上没有代码强制执行 = 没有约束。约束写在代码里，才是真正的执行力。"*
 >
-> *— DealForge Harness Engine, v5.0.1*
+> *— BP-Factory Harness Engine, v5.0.1*
