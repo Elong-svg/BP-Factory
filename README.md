@@ -1,115 +1,132 @@
-# 🦅 Oh My BP
+# 🏭 DealForge
 
-> **专为腾讯 WorkBuddy 设计的 AI 商业计划书生成工具集。**  
-> 一行命令，从原始数据到专业级商业计划书 —— 不套模板、不走捷径、不牺牲质量。
+> **AI-Powered Business Plan Foundry — 为腾讯 WorkBuddy 量身锻造的 13 技能智能编排引擎。**
+>
+> 从原始数据到投资人-ready 的专业商业计划书，一行命令，全自动流水线。
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![WorkBuddy](https://img.shields.io/badge/Tencent-WorkBuddy-blueviolet.svg)](https://workbuddy.qq.com)
+[![Skills](https://img.shields.io/badge/Skills-13-orange.svg)](#-技能全景图)
 
 ---
 
-## 💡 是什么？
+## 💡 为什么叫 DealForge？
 
-**Oh My BP** 是一套为 **腾讯 WorkBuddy AI 编程助手** 量身打造的商业计划书生成工具集。
+**Deal** = 交易、商业计划书、投资标的。**Forge** = 锻造、熔炉、千锤百炼。
 
-它不是一堆 Markdown 模板的简单堆砌，而是一个深度适配 WorkBuddy 工作流体系的 **智能 Agent 协作引擎** —— 具备 Harness 代码级约束、多 Agent 并行协作、数据清洗到可视化图表生成的完整能力。
+就像铁匠在熔炉中反复锤炼钢铁，DealForge 通过 **6 人专家团队并行协作 + 3 级代码强制检查点 + 13 个技能无缝编排**，将原始数据"锻造"成经得起投资人审视的专业商业计划书。
 
-### 为什么叫 "Oh My"？
-
-灵感来源于开源社区经典的 "Oh My" 系列（如 Oh My Zsh、Oh My CodeBuddy），代表 **开箱即用、一键启动、无需折腾** 的开发体验。
+不是模板填充，不是 AI 随机输出 —— 是 **流水线级的智能锻造工艺**。
 
 ---
 
-## 🚀 为什么选择 Oh My BP？
+## 🔥 核心亮点
 
-### WorkBuddy 深度集成
-
-| 特性 | 说明 |
-|------|------|
-| **多 Agent 协作体系** | 深度适配 WorkBuddy 的 Agent 调度框架，6 个领域专家（行业分析师、财务专家、竞争分析师等）并行写作 |
-| **Harness 约束引擎** | 专为 WorkBuddy Agent 循环设计的 3 级检查点系统，代码级强制校验 |
-| **技能生态联动** | 与 WorkBuddy 内置的 data-cleaner、business-writer、markdown-to-word 等技能无缝衔接 |
-| **记忆系统集成** | 自动对接 WorkBuddy 的记忆层（MEMORY.md + .learnings/），持续优化输出质量 |
-
-### 核心能力
-
-- 📊 **数据驱动** —— 从原始 CSV/JSON 数据自动清洗、分析到可视化图表
-- 🤖 **多 Agent 协作** —— 6 个领域专家并行写作，Harness 自动协调
-- 🔒 **代码级约束引擎** —— 字数实测、章节去重、图表渲染验证、技能调用追踪，全部强制执行
-- 📝 **专业文档输出** —— Markdown → Word 一键转换，深蓝标题层次 + 专业三线表 + 企业级排版
-
----
-
-## 📦 包含哪些技能？
-
-### 核心技能（3 个主引擎）
-
-| 技能 | 版本 | 说明 |
-|------|------|------|
-| **[business-plan-creator](skills/business-plan-creator/SKILL.md)** | v5.0.1 | 🏗️ 主引擎：Harness 约束引擎 + 3 级检查点 + 技能追踪 |
-| **[markdown-to-word](skills/markdown-to-word/SKILL.md)** | v2.0.0 | 📄 Markdown → Word 转换器：4 套设计模板，企业级排版 |
-| **[markdown-processor](skills/markdown-processor/SKILL.md)** | v1.0.0 | 🔧 文档处理引擎：Markdown 合并、标题修复、格式统一 |
-
-### 辅助技能（7 个支撑组件）
-
-| 技能 | 说明 |
-|------|------|
-| **data-cleaner** | 🧹 多源数据清洗与结构化引擎，质量评分 ≥ 80 |
-| **business-writer** | ✍️ 商业写作专家，三层论述结构 + 主旨标题 + 去 AI 味 |
-| **humanizer** | 🎭 去除 AI 味，让内容读起来像人写的 |
-| **assistant** | 🧠 WorkBuddy 核心能力整合：自我提升 + 记忆管理 + 知识图谱 |
-| **self-improving-agent** | 🔄 Agent 自我反思与持续学习框架 |
-| **ontology** | 📚 结构化知识图谱引擎 |
-| **find-skills** | 🔍 技能发现与安装助手 |
-
-> **共 10 个技能**：business-plan-creator 运行时会联动调用 data-visualization（WorkBuddy 内置插件）和 finance-data-retrieval（数据获取），两者均为平台级能力，不包含在本工具集内。
-
----
-
-## 🏗️ Harness 约束引擎（核心亮点）
-
-### 传统 vs Oh My BP
+### 代码强制，不是纸上谈兵
 
 ```
 ❌ 传统方案：SKILL.md 里写"请确保字数达标" → AI 可能忽略
-✅ Oh My BP：master_check.py 代码强制校验 → 不达标就拒绝输出
+✅ DealForge：master_check.py 代码强制校验 → 不达标就拒绝输出
 ```
 
-### 三级检查点
+**约束流程，不约束内容。** Harness 管"怎么做"的合规性，AI 自主决定"写什么"。
 
-| 检查点 | 时机 | 校验内容 |
-|--------|------|---------|
-| **pre-flight** | Agent 启动前 | Agent 数量配额、任务分配、资源校验 |
-| **pre-merge** | 章节合并前 | 章节编号冲突检测（>75% 相似度自动拦截） |
-| **pre-deliver** | 最终交付前 | 字数实测、图表渲染验证、10 项技能调用完整性 |
+### 6 人专家团队并行协作
 
-### 技能追踪系统
+| 角色 | 职责 |
+|------|------|
+| 🦅 **Claw（项目总监）** | 数据收集、清洗、流程编排、最终交付 |
+| 🔬 **行业研究员** | 行业趋势分析、竞争格局、市场规模测算 |
+| 💰 **财务分析师** | 三大报表分析、DCF 估值、盈利预测 |
+| 🎯 **战略分析师** | SWOT 分析、商业模式画布、投资建议 |
+| 🛡️ **流程监管专家** | Harness 检查点触发、全流程合规监督 |
+| ✅ **质量审核官** | 4 层质量关口检查、一票否决权 |
 
-```
-AI 每调用一个必需技能 → 写入 skill_trace.json → Harness 验证 10/10 完整 → 放行
-```
+### 3 级强制检查点
 
-> **约束流程，不约束内容** —— Harness 管流程合规，AI 自主决定写什么、怎么写。
+| 检查点 | 时机 | 校验内容 | 失败后果 |
+|--------|------|---------|---------|
+| 🔒 **pre-flight** | Agent 启动前 | Agent 配额 = 6、项目目录初始化 | 流程硬性停止 |
+| 🔒 **pre-merge** | 章节合并前 | 章节去重（>75% 相似度拦截）、8 章完整性 | 打回重写 |
+| 🔒 **pre-deliver** | 最终交付前 | 字数实测（≥20000）、图表存在性验证、10 项技能调用完整性 | 拒绝输出 |
 
 ---
 
-## 📊 markdown-to-word 转换器
+## 📦 技能全景图（13 个技能）
+
+### 🏗️ 第一层：核心引擎（3 个）
+
+| 技能 | 版本 | 能力 |
+|------|------|------|
+| **[business-plan-creator](skills/business-plan-creator/SKILL.md)** | `v5.0.1` | 主引擎：6 人团队调度 + Harness 约束引擎 + skill_trace 追踪 |
+| **[markdown-to-word](skills/markdown-to-word/SKILL.md)** | `v2.0.0` | 文档转换器：4 套企业级模板（深蓝标题 / 三线表 / 条纹行）|
+| **[markdown-processor](skills/markdown-processor/SKILL.md)** | `v1.0.0` | 文档处理引擎：多文件合并、标题修复、格式统一 |
+
+### 🔧 第二层：支撑组件（7 个）
+
+| 技能 | 用途 |
+|------|------|
+| **data-cleaner** | 多源数据清洗引擎：去重、可信度评级、结构化输出（质量评分 ≥ 80）|
+| **business-writer** | 商业写作专家：三层论述结构 + 主旨标题 + 去除 AI 味 |
+| **humanizer** | 文本人性化：自动检测并消除 AI 生成痕迹 |
+| **assistant** | WorkBuddy 核心整合：自我提升 + 记忆管理 + 知识图谱 |
+| **self-improving-agent** | Agent 自我反思与持续学习框架 |
+| **ontology** | 结构化知识图谱引擎 |
+| **find-skills** | 技能发现与安装助手 |
+
+### 🚀 第三层：领域整合包（3 个）🆕
+
+| 整合包 | 内容 | 与 DealForge 的关系 |
+|--------|------|-------------------|
+| **[scientist](skills/scientist/SKILL.md)** | 7 合 1 科研全流程：头脑风暴→文献→EDA→可视化→论文→PPT→示意图 | 提供 data-visualization（期刊级图表生成）能力 |
+| **[NeoData金融搜索服务](skills/NeoData金融搜索服务/SKILL.md)** | 自然语言金融数据搜索：A股/港股/美股/基金/宏观/外汇 7 大类 | 提供 finance-data-retrieval（实时金融数据获取）能力 |
+| **[金融财务分析整合包](skills/金融财务分析整合包/SKILL.md)** | 全链路金融分析：数据获取→财务分析→交易决策→报表生成→可视化 | 补充三大报表分析 + 投资决策引擎 |
+
+> **13 个技能协同工作**：business-plan-creator 运行时自动联动 data-cleaner（清洗）→ business-writer（写作）→ markdown-processor（合并）→ markdown-to-word（输出），scientist 和金融包提供底层数据能力支撑。
+
+---
+
+## 🏗️ 架构：智能锻造流水线
+
+```
+                        DealForge Pipeline
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│  Raw Data    ┌──────────┐   ┌──────────┐   ┌──────────┐   📄   │
+│  ──────────▶ │ 数据清洗  │──▶│ 专家写作  │──▶│ 文档整合  │──▶ 输出 │
+│              │data-cleaner│   │6 Agents  │   │md-processor│      │
+│              └──────────┘   └──────────┘   └──────────┘        │
+│                    │              │              │               │
+│              ┌─────▼─────┐ ┌────▼────┐  ┌─────▼─────┐          │
+│              │ NeoData   │ │Scientist│  │markdown-   │          │
+│              │ 金融数据   │ │可视化   │  │to-word     │          │
+│              └───────────┘ └─────────┘  └───────────┘          │
+│                                                                 │
+│    🔒 pre-flight          🔒 pre-merge        🔒 pre-deliver    │
+│    Agent配额=6            章节去重+完整性      字数+图表+技能追踪  │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 🎯 markdown-to-word 转换器
 
 ### 四套设计模板
 
 | 模板 | 适用场景 | 特色 |
 |------|---------|------|
-| **user_default** | 自定义（推荐） | 深蓝标题层次 + 专业三线表 + 微软雅黑正文 |
+| **user_default** | 自定义（推荐）| 深蓝标题层次 + 专业三线表 + 微软雅黑正文 |
 | **corporate** | 商业计划书、投资分析报告 | 28pt 深蓝标题 + 蓝色表头 |
 | **academic** | 学术论文、研究报告 | 双倍行距 + 首行缩进 |
 | **default** | 通用文档 | 简洁通用 |
 
-### v2.0 关键修复
+### v2.0.0 关键修复
 
-- 🔥 修复颜色 Fallback Bug：表头全黑 → 专业蓝色背景
-- 🔥 字号层次优化：H1/H2/H3 从几乎一样 → 22pt/16pt/13pt 清晰层次
-- 🔥 表格样式全面升级：三线表 + 蓝色表头 + 条纹行
+- 🔥 修复颜色 Fallback Bug：从全局黑色 → 专业蓝色背景表头
+- 🔥 字号层次优化：H1/H2/H3 从几乎一样 → 22pt/16pt/13pt 清晰三层
+- 🔥 表格样式全面升级：三线表 + 蓝色表头（#2B579A）+ 浅蓝灰条纹行（#E8EEF4）
 
 ---
 
@@ -118,15 +135,15 @@ AI 每调用一个必需技能 → 写入 skill_trace.json → Harness 验证 10
 ### 前置要求
 
 ```bash
-pip install markdown python-docx beautifulsoup4 python-docx-template
+pip install markdown python-docx beautifulsoup4
 ```
 
 ### 在 WorkBuddy 中使用
 
 ```markdown
-# 直接通过 WorkBuddy 技能调用
+# 一键生成商业计划书
 @skill:business-plan-creator
-主题：分析 XX 公司的投资价值
+主题：分析 XX 公司的投资价值与发展战略
 
 # Markdown 转 Word
 @skill:markdown-to-word
@@ -144,6 +161,14 @@ python scripts/bp_orchestrator.py --topic "你的公司或项目"
 # Markdown 转 Word
 cd skills/markdown-to-word
 python scripts/markdown_to_word_pro.py input.md -o output.docx -t user_default
+
+# Markdown 文档处理
+cd skills/markdown-processor
+python scripts/process.py input.md --output clean.md
+
+# 金融数据查询
+cd skills/NeoData金融搜索服务
+python scripts/query.py "腾讯最新财报营收"
 ```
 
 ---
@@ -151,56 +176,70 @@ python scripts/markdown_to_word_pro.py input.md -o output.docx -t user_default
 ## 📁 项目结构
 
 ```
-oh-my-bp/
+DealForge/
 ├── skills/
-│   ├── business-plan-creator/      # 商业计划书主引擎
-│   │   ├── SKILL.md                # 技能文档（v5.0.1）
+│   ├── business-plan-creator/      # 🏗️ 商业计划书主引擎 (v5.0.1)
+│   │   ├── SKILL.md
 │   │   ├── scripts/
 │   │   │   ├── harness/            # Harness 约束引擎
-│   │   │   │   ├── master_check.py # 主检查器
+│   │   │   │   ├── master_check.py # 主检查器（3 级检查点）
 │   │   │   │   ├── chapter_dedup.py# 章节去重
 │   │   │   │   ├── chart_existence.py # 图表验证
-│   │   │   │   ├── skill_trace.py  # 技能追踪
+│   │   │   │   ├── skill_trace.py  # 技能追踪（v5.0.1 新增）
 │   │   │   │   └── word_count.py   # 字数实测
 │   │   │   └── bp_orchestrator.py  # 流程编排器
-│   │   └── templates/              # 商业计划书模板
-│   ├── markdown-to-word/           # Markdown 转 Word
+│   │   └── references/             # 专家职责 + 质量清单
+│   │
+│   ├── markdown-to-word/           # 📄 Markdown → Word (v2.0.0)
 │   │   ├── scripts/markdown_to_word_pro.py
-│   │   └── assets/styles/          # 4 套设计模板
-│   ├── markdown-processor/          # 文档处理引擎
+│   │   └── assets/styles/          # 4 套设计模板 XML
+│   │
+│   ├── markdown-processor/         # 🔧 文档处理引擎 (v1.0.0)
 │   │   └── scripts/
-│   │       ├── merge.py             # 多文件合并
-│   │       └── process.py           # 标题修复 + 格式统一
-│   ├── data-cleaner/               # 数据清洗
-│   ├── business-writer/            # 商业写作
-│   └── ...                         # 其他辅助技能
+│   │       ├── merge.py            # 多文件合并
+│   │       ├── process.py          # 标题修复 + 格式统一
+│   │       ├── check_headings.py   # 标题检查
+│   │       └── fix_headings.py     # 标题修复
+│   │
+│   ├── scientist/                  # 🔬 科研全流程整合包 (7合1)
+│   ├── NeoData金融搜索服务/        # 📊 自然语言金融数据搜索
+│   ├── 金融财务分析整合包/          # 💹 全链路金融分析
+│   │
+│   ├── data-cleaner/               # 🧹 数据清洗引擎
+│   ├── business-writer/            # ✍️ 商业写作专家
+│   ├── humanizer/                  # 🎭 文本人性化
+│   ├── assistant/                  # 🧠 WorkBuddy 核心整合
+│   ├── self-improving-agent/       # 🔄 自我学习框架
+│   ├── ontology/                   # 📚 知识图谱引擎
+│   └── find-skills/                # 🔍 技能发现助手
+│
+├── LICENSE                         # MIT License
 └── README.md
 ```
 
 ---
 
-## 💡 设计理念
+## 💡 设计哲学
 
 ### 三个"绝不"
 
-1. **绝不套模板** —— 内容写作 100% AI 自主，Harness 只约束流程不约束内容
-2. **绝不跳步骤** —— 代码级强制校验，文档约束 ≠ 纸上谈兵
-3. **绝不硬编码** —— 所有转换、清洗、生成全部通过技能脚本执行
+1. **绝不套模板** — 内容写作 100% AI 自主，Harness 只约束流程不约束内容
+2. **绝不跳步骤** — 代码级强制校验，约束写在代码里，不是写在纸上
+3. **绝不硬编码** — 所有转换、清洗、生成全部通过技能脚本执行，有技能必须用技能
 
 ### 自主 vs 约束的边界
 
 | Harness 管什么 | AI 自主什么 |
 |----------------|------------|
-| Agent 数量、章节去重 | 分析角度、论证方式 |
-| 字数实测、图表验证 | 数据来源、案例选择 |
-| 技能调用完整性 | 写作风格、表达策略 |
-| 交付格式合规 | 商业判断、投资逻辑 |
+| Agent 数量、章节去重、图表验证 | 分析角度、论证方式、案例选择 |
+| 字数实测、技能调用完整性 | 写作风格、表达策略、商业判断 |
+| 交付格式合规 | 数据解读、投资逻辑、风险判断 |
 
 ---
 
 ## 📄 许可证
 
-本项目采用 **MIT License** 开源协议。你可以自由使用、修改、分发本代码，用于个人学习或商业项目。
+本项目采用 **MIT License** 开源协议。自由使用、修改、分发。
 
 ---
 
@@ -208,8 +247,10 @@ oh-my-bp/
 
 - 由 [Elong-svg](https://github.com/Elong-svg) 创建并维护
 - 专为 **腾讯 WorkBuddy AI 编程助手** 设计开发
-- 感谢每一位贡献者 ❤️
+- 技能编排、Agent 协作、约束引擎均深度适配 WorkBuddy 工作流体系
 
 ---
 
 > *"约束写在纸上没有代码强制执行 = 没有约束。约束写在代码里，才是真正的执行力。"*
+>
+> *— DealForge Harness Engine, v5.0.1*
